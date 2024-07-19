@@ -1,7 +1,7 @@
-ThisBuild / name := "sangria-akka-http"
+ThisBuild / name := "sangria-pekko-http"
 ThisBuild / organization := "org.sangria-graphql"
 
-ThisBuild / description := "Sangria Akka HTTP Support"
+ThisBuild / description := "Sangria Pekko HTTP Support"
 ThisBuild / homepage := Some(url("https://sangria-graphql.github.io/"))
 ThisBuild / licenses := Seq(
   "Apache License, ASL Version 2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0"))
@@ -45,6 +45,6 @@ lazy val circe = (project in file("circe"))
 lazy val root = (project in file("."))
   .aggregate(core, circe)
   .settings(
-    name := "sangria-akka-http",
+    name := "sangria-pekko-http",
     publishArtifact := false
   )

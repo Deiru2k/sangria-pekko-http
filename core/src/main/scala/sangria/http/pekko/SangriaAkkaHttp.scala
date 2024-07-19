@@ -1,8 +1,8 @@
-package sangria.http.akka
+package sangria.http.pekko
 
-import akka.http.scaladsl.model.MediaTypes._
-import akka.http.scaladsl.server.Directives._
-import akka.http.scaladsl.server.{
+import org.apache.pekko.http.scaladsl.model.MediaTypes._
+import org.apache.pekko.http.scaladsl.server.Directives._
+import org.apache.pekko.http.scaladsl.server.{
   Directive,
   ExceptionHandler,
   MalformedQueryParamRejection,
@@ -11,14 +11,14 @@ import akka.http.scaladsl.server.{
   Route,
   StandardRoute
 }
-import akka.http.scaladsl.unmarshalling.{FromEntityUnmarshaller, FromStringUnmarshaller}
+import org.apache.pekko.http.scaladsl.unmarshalling.{FromEntityUnmarshaller, FromStringUnmarshaller}
 import Util.explicitlyAccepts
 import sangria.ast.Document
 import sangria.parser.{QueryParser, SyntaxError}
 import GraphQLRequestUnmarshaller._
-import akka.http.javadsl.server.RequestEntityExpectedRejection
-import akka.http.scaladsl.marshalling.ToEntityMarshaller
-import akka.http.scaladsl.model.StatusCodes.{
+import org.apache.pekko.http.javadsl.server.RequestEntityExpectedRejection
+import org.apache.pekko.http.scaladsl.marshalling.ToEntityMarshaller
+import org.apache.pekko.http.scaladsl.model.StatusCodes.{
   BadRequest,
   InternalServerError,
   OK,

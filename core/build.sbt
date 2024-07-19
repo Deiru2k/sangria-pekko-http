@@ -1,13 +1,13 @@
 import Dependencies._
 
-name := "sangria-akka-http-core"
+name := "sangria-pekko-http-core"
 organization := "org.sangria-graphql"
 
 libraryDependencies ++= Seq(
   "org.sangria-graphql" %% "sangria" % SangriaVersion.sangria,
   "org.sangria-graphql" %% "sangria-slowlog" % SangriaVersion.sangriaSlowlog,
-  "com.typesafe.akka" %% "akka-actor" % akkaVersion,
-  "com.typesafe.akka" %% "akka-stream" % akkaVersion,
-  "com.typesafe.akka" %% "akka-http" % akkaHttpVersion,
+  "org.apache.pekko" %% "pekko-actor-typed" % pekkoVersion,
+  "org.apache.pekko" %% "pekko-stream" % pekkoVersion,
+  "org.apache.pekko" %% "pekko-http" % pekkoHttpVersion,
   "org.scalatest" %% "scalatest" % "3.2.18" % Test
 )

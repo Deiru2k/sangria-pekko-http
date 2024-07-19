@@ -1,16 +1,16 @@
-package sangria.http.akka.circe
+package sangria.http.pekko.circe
 
-import akka.http.scaladsl.marshalling._
-import akka.http.scaladsl.model.StatusCodes._
-import akka.http.scaladsl.server.Directives._
-import akka.http.scaladsl.server.Route
-import akka.http.scaladsl.unmarshalling.{FromEntityUnmarshaller, _}
-import de.heikoseeberger.akkahttpcirce.FailFastCirceSupport
+import org.apache.pekko.http.scaladsl.marshalling._
+import org.apache.pekko.http.scaladsl.model.StatusCodes._
+import org.apache.pekko.http.scaladsl.server.Directives._
+import org.apache.pekko.http.scaladsl.server.Route
+import org.apache.pekko.http.scaladsl.unmarshalling.{FromEntityUnmarshaller, _}
+import com.github.pjfanning.pekkohttpcirce.FailFastCirceSupport
 import io.circe._
 import io.circe.generic.semiauto._
 import sangria.execution.Executor
-import sangria.http.akka.SangriaAkkaHttp.{GraphQLErrorResponse, MalformedRequest}
-import sangria.http.akka.{GraphQLHttpRequest, SangriaAkkaHttp, Variables}
+import sangria.http.pekko.SangriaAkkaHttp.{GraphQLErrorResponse, MalformedRequest}
+import sangria.http.pekko.{GraphQLHttpRequest, SangriaAkkaHttp, Variables}
 import sangria.parser.SyntaxError
 import sangria.schema.Schema
 
